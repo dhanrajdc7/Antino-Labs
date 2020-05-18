@@ -36,7 +36,7 @@ struct ContentView: View {
                                 .foregroundColor(.gray)
                         }
                         Spacer()
-                    }.padding(3)
+                    }.padding(4)
                 }.padding(5)
             }
             .navigationBarTitle("Antino Labs")
