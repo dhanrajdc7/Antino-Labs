@@ -7,11 +7,47 @@
 //
 
 import SwiftUI
+import UIKit
+import ImageWithActivityIndicator
 
 struct ContentView: View {
+    
+    @ObservedObject var fetcher = PeopleFetcher()
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(fetcher.peoples) { person in
+                HStack {
+
+                    CircularImage(loader: ViewLoader(url : person.imgUrl))
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text(person.name)
+                            .font(.title)
+                        
+                        HStack(alignment: .center, spacing: 10) {
+                            Text(person.age)
+                                .font(.subheadline)
+                                .foregroundColor(.blue)
+                            
+                            Text(person.location)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                    }.padding(3)
+                }.padding(5)
+            }
+            .navigationBarTitle("Antino Labs")
+        }
     }
+    
+    
+}
+
+extension UIImageView {
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

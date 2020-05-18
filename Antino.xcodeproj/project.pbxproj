@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		3633DBB0247270570099877A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3633DBAF247270570099877A /* Assets.xcassets */; };
 		3633DBB3247270570099877A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3633DBB2247270570099877A /* Preview Assets.xcassets */; };
 		3633DBB6247270570099877A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3633DBB4247270570099877A /* LaunchScreen.storyboard */; };
+		3633DBC0247270F30099877A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633DBBF247270F30099877A /* Person.swift */; };
+		3633DBC82472819C0099877A /* PersonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3633DBC72472819C0099877A /* PersonFetcher.swift */; };
+		365D092A24728D1400A9E6CD /* ImageWithActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 365D092924728D1400A9E6CD /* ImageWithActivityIndicator */; };
+		365D092C2472930D00A9E6CD /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D092B2472930D00A9E6CD /* CircularImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		3633DBB2247270570099877A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3633DBB5247270570099877A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3633DBB7247270570099877A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3633DBBF247270F30099877A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3633DBC72472819C0099877A /* PersonFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFetcher.swift; sourceTree = "<group>"; };
+		365D092B2472930D00A9E6CD /* CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365D092A24728D1400A9E6CD /* ImageWithActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,9 @@
 				3633DBB4247270570099877A /* LaunchScreen.storyboard */,
 				3633DBB7247270570099877A /* Info.plist */,
 				3633DBB1247270570099877A /* Preview Content */,
+				3633DBBF247270F30099877A /* Person.swift */,
+				3633DBC72472819C0099877A /* PersonFetcher.swift */,
+				365D092B2472930D00A9E6CD /* CircularImage.swift */,
 			);
 			path = Antino;
 			sourceTree = "<group>";
@@ -91,6 +102,9 @@
 			dependencies = (
 			);
 			name = Antino;
+			packageProductDependencies = (
+				365D092924728D1400A9E6CD /* ImageWithActivityIndicator */,
+			);
 			productName = Antino;
 			productReference = 3633DBA6247270520099877A /* Antino.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 3633DB9D247270520099877A;
+			packageReferences = (
+				365D092824728D1400A9E6CD /* XCRemoteSwiftPackageReference "ViewWithActivityIndicator" */,
+			);
 			productRefGroup = 3633DBA7247270520099877A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3633DBC82472819C0099877A /* PersonFetcher.swift in Sources */,
+				3633DBC0247270F30099877A /* Person.swift in Sources */,
+				365D092C2472930D00A9E6CD /* CircularImage.swift in Sources */,
 				3633DBAA247270520099877A /* AppDelegate.swift in Sources */,
 				3633DBAC247270520099877A /* SceneDelegate.swift in Sources */,
 				3633DBAE247270520099877A /* ContentView.swift in Sources */,
@@ -342,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		365D092824728D1400A9E6CD /* XCRemoteSwiftPackageReference "ViewWithActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/blackwiz4rd/ViewWithActivityIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		365D092924728D1400A9E6CD /* ImageWithActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 365D092824728D1400A9E6CD /* XCRemoteSwiftPackageReference "ViewWithActivityIndicator" */;
+			productName = ImageWithActivityIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3633DB9E247270520099877A /* Project object */;
 }
